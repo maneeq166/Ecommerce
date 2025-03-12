@@ -4,6 +4,10 @@
     font-weight: 400;
   }
   
+  body{
+    user-select: none;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -27,12 +31,59 @@
   
   @import "./admin/mixin";
   
+  @import "./admin/home";
   @import "./admin/dashboard";
   @import "./admin/products";
   @import "./admin/chart";
   @import "./admin/dashboardapp";
   @import "./admin/mediaquery";
   
+  .header{
+    @include flex(row,flex-end);
+    
+    a{
+      letter-spacing:  2px;
+      color: rgb(0, 0, 0);
+      font-size: 1.4rem;
+      &:hover {
+        color:rgb(23, 35, 75);
+      }
+    }
+    button{
+      background:transparent;
+      border: none;
+      font-size:1.2rem;
+      cursor: pointer;
+      &:hover {
+        color:rgb(23, 35, 75);
+      }
+
+    }
+    dialog{ 
+      border: 1px solid gray;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100px;
+      position: absolute;
+      left: calc(100% - 100px);
+      top: 8%;
+      >div{
+        @include flex(column,flex-start,center,0.25rem);
+
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
   .admin-container {
     @include grid(1fr 4fr, 2rem);
     height: 100vh;

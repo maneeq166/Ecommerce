@@ -4,6 +4,7 @@ import Loader from "./components/loader";
 const Cart = lazy(() => import("./pages/Cart"));
 const Search = lazy(() => import("./pages/Search"));
 const Home = lazy(() => import("./pages/Home"));
+import Header from "./components/header";
 
 {
   /* Admin Dashboard */
@@ -30,6 +31,7 @@ function App() {
   return (
     <div>
       <Router>
+      <Header/>
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -71,7 +73,6 @@ function App() {
                 element={<TransactionManagement />}
               />
             </Route>
-            ;
           </Routes>
         </Suspense>
       </Router>
