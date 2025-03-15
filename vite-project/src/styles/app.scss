@@ -30,8 +30,8 @@
   }
   
   @import "./admin/mixin";
-  
-  @import "./admin/home";
+  @import "cart.scss";
+  @import "home";
   @import "./admin/dashboard";
   @import "./admin/products";
   @import "./admin/chart";
