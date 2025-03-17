@@ -5,10 +5,13 @@ const Cart = lazy(() => import("./pages/Cart"));
 const Search = lazy(() => import("./pages/Search"));
 const Home = lazy(() => import("./pages/Home"));
 import Header from "./components/header";
+const Login = lazy(()=> import("./pages/Login"));
+const Orders = lazy(()=> import ("./pages/Orders"))
 
 {
   /* Admin Dashboard */
 }
+const Shipping = lazy(()=>import ("./pages/Shipping"))
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
 const Products = lazy(() => import("./pages/admin/products"));
 const Customers = lazy(() => import("./pages/admin/customers"));
@@ -37,6 +40,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<Search />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/orders"  element={<Orders/>}/>
+            {/* Logged in User Routes*/}
+            <Route>
+            <Route path="/shipping" element={<Shipping />} />
+            </Route>
+
             {/* Admin Routes */}
             <Route
               // element={

@@ -31,10 +31,11 @@
       }
   
       > a {
-        // background-color: $color3;
+        background-color: rgb(37, 37, 182);
         padding: 1rem;
         text-decoration: none;
-        // color: $color1;
+        color: white;
+        font-weight: 600;
         @include flex;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -59,7 +60,7 @@
     padding: 1rem;
     @include flex(row, flex-start, center, 3rem);
     > img {
-      @include square(10rem);
+      @include square(10rem);      
       object-fit: contain;
     }
   
@@ -67,7 +68,7 @@
       @include flex(column, center, flex-start, 0.25rem);
       a {
         font-size: 1.2rem;
-        // color: $color2;
+        // color: blue;
         &:hover {
         //   color: $color3;
         }
@@ -89,7 +90,7 @@
         cursor: pointer;
         font-size: 1.2rem;
         &:hover {
-        //   background-color: $color2;
+        //   background-color: ;
         //   color: $color1;
         }
       }

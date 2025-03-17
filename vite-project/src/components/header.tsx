@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 function Header() {
-    const user = {_id:"090",role:'admin'}
+    const user = {_id:"sadfasd",role:''}
 
     const [IsOpen,setIsOpen]=useState<boolean>(false);
   
